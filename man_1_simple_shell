@@ -1,0 +1,40 @@
+.TH man 1 "26 April 2023" "1.0" "Simple Shell man page"
+.SH NAME
+.B Simple Unix Shell
+
+- A Simple UNIX command line shell
+  .SH INTRO
+  The Standard input commands can be read, understood, and executed by shell.
+  .SH DESCRIPTION
+  The shell reads data from a file or the terminal line line by line. If the line contains a valid command, it is then interpreted and executed.
+
+.SH USAGE
+All the files are to be compiled on an Ubuntu 20.04 LTS machine with "gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh".
+
+Once compiled, to start the program, run:
+.br
+$ ./hsh
+
+To exit the program, run:
+.br
+$ exit
+
+.SH BUILT-INS
+The following commands are supported by the shell:
+
+.B env -
+Print the current environment.
+
+.B setenv VARIABLE VALUE -
+Initialize a new environment variable, or modify an existing one.
+
+.B unsetenv VARIABLE -
+Remove an environment variable.
+
+.SH RETURN VALUE
+Olaf shell will exit with status 0 unless status is specified.
+.SH SEE ALSO
+.I sh(1)
+
+.SH AUTHOR
+Steven Senyo Fiawornu, Josheph Darko
