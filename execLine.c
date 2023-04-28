@@ -2,8 +2,7 @@
 
 /**
  * exec_line - finds builtins and commands
- *
- * @datash: data relevant (args)
+ * @datash: relevant data
  * Return: 1 on success.
  */
 int exec_line(sh_data *datash)

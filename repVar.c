@@ -137,10 +137,9 @@ char *rplce_input(r_var **head, char *input, char *new_input, int nlen)
 
 /**
  * rplce_var - calls functions to replace string into vars
- *
- * @input: input string
- * @datash: data structure
- * Return: replaced string
+ * @input: string input
+ * @datash: data
+ * Return: string replacement
  */
 char *rplce_var(char *input, sh_data *datash)
 {

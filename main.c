@@ -1,9 +1,9 @@
 #include "headers.h"
 
 /**
- * free_data - frees data structure
- * @datash: data structure
- * Return: no return
+ * free_data - frees
+ * @datash: data
+ * Return: nothing
  */
 void free_data(sh_data *datash)
 {
@@ -20,9 +20,9 @@ void free_data(sh_data *datash)
 
 /**
  * set_data - Initialize data structure
- * @datash: data structure
- * @av: argument vector
- * Return: no return
+ * @datash: data
+ * @av: argument
+ * Return: nothing
  */
 void set_data(sh_data *datash, char **av)
 {
@@ -50,8 +50,8 @@ void set_data(sh_data *datash, char **av)
 
 /**
  * main - Entry point
- * @ac: argument count
- * @av: argument vector
+ * @ac: arg count
+ * @av: arg vector
  * Return: 0 on success.
  */
 int main(int ac, char **av)

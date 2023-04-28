@@ -1,12 +1,12 @@
 #include "headers.h"
 
 /**
- * errmsg_strcat - function that concatenates the message for cd error
- * @datash: data relevant (directory)
- * @msg: message to print
- * @error: output message
- * @ver_str: counter lines
- * Return: error message
+ * errmsg_strcat - concatenates the message for cd error
+ * @datash: relevant data
+ * @msg: msg to print
+ * @error: output msg
+ * @ver_str: count lines
+ * Return: error msg
  */
 char *errmsg_strcat(sh_data *datash, char *msg, char *error, char *ver_str)
 {
@@ -39,8 +39,8 @@ char *errmsg_strcat(sh_data *datash, char *msg, char *error, char *ver_str)
 
 /**
  * errmsg_get_cd - error message for cd command in get_cd
- * @datash: data relevant (directory)
- * Return: Error message
+ * @datash: relevant data
+ * Return: Error msg
  */
 char *errmsg_get_cd(sh_data *datash)
 {
@@ -78,8 +78,8 @@ char *errmsg_get_cd(sh_data *datash)
 
 /**
  * errmsg_notFound - generic error message for command not found
- * @datash: data relevant (counter, arguments)
- * Return: Error message
+ * @datash:  relevant data
+ * Return: Error msg
  */
 char *errmsg_notFound(sh_data *datash)
 {
@@ -110,8 +110,8 @@ char *errmsg_notFound(sh_data *datash)
 
 /**
  * errmsg_exit_sh - generic error message for exit in get_exit
- * @datash: data relevant (counter, arguments)
- * Return: Error message
+ * @datash: relevant data
+ * Return: Error msg
  */
 char *errmsg_exit_sh(sh_data *datash)
 {

@@ -2,7 +2,7 @@
 
 /**
  * _isCdir - checks ":" if is in the current directory.
- * @path: type char pointer char.
+ * @path: pointer char.
  * @i: type int pointer of index.
  * Return: 1 if the path is searchable in the cd, 0 otherwise.
  */
@@ -72,8 +72,8 @@ char *_whichCmd(char *cmd, char **_environ)
 }
 
 /**
- * _excutble - determines if is an executable
- * @datash: data structure
+ * _excutble - determines an executable
+ * @datash: data
  * Return: 0 if is not an executable, other number if it does
  */
 int _excutble(sh_data *datash)
@@ -116,9 +116,9 @@ int _excutble(sh_data *datash)
 }
 
 /**
- * _chk_err_cmd - verifies if user has permissions to access
- * @dir: destination directory
- * @datash: data structure
+ * _chk_err_cmd - verifies user has permissions to access
+ * @dir: dest directory
+ * @datash: data
  * Return: 1 if there is an error, 0 if not
  */
 int _chk_err_cmd(char *dir, sh_data *datash)
@@ -153,7 +153,7 @@ int _chk_err_cmd(char *dir, sh_data *datash)
 
 /**
  * _exec_cmd - executes command lines
- * @datash: data relevant (args and input)
+ * @datash: relevant data
  * Return: 1 on success.
  */
 int _exec_cmd(sh_data *datash)

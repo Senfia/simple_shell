@@ -2,12 +2,11 @@
 
 /**
  * addVarTonode - adds a variable at the end
- * of a r_var list.
- * @head: head of the linked list.
- * @lvar: length of the variable.
- * @val: value of the variable.
- * @lval: length of the value.
- * Return: address of the head.
+ * @head:  linked list head.
+ * @lvar: variable length.
+ * @val: variable value.
+ * @lval:  value length.
+ * Return: address head.
  */
 r_var *addVarTonode(r_var **head, int lvar, char *val, int lval)
 {
@@ -40,8 +39,8 @@ r_var *addVarTonode(r_var **head, int lvar, char *val, int lval)
 
 /**
  * freeVarLi - frees a r_var list
- * @head: head of the linked list.
- * Return: no return.
+ * @head: linked list head.
+ * Return: nothing.
  */
 void freeVarLi(r_var **head)
 {

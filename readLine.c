@@ -2,9 +2,8 @@
 
 /**
  * readLine - reads the input string.
- *
  * @i_eof: return value of getline function
- * Return: input string
+ * Return: string input
  */
 char *readLine(int *i_eof)
 {

@@ -2,8 +2,8 @@
 
 /**
  * errmsg_env - error message for env in get_env.
- * @datash: data relevant (counter, arguments)
- * Return: error message.
+ * @datash: relevant data
+ * Return: error msg.
  */
 char *errmsg_env(sh_data *datash)
 {
@@ -37,7 +37,7 @@ char *errmsg_env(sh_data *datash)
 }
 /**
  * errmsg_path_denied - error message for path and failure denied permission.
- * @datash: data relevant (counter, arguments).
+ * @datash: relevant data
  * Return: The error string.
  */
 char *errmsg_path_denied(sh_data *datash)

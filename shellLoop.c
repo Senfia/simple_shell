@@ -2,9 +2,8 @@
 
 /**
  * rm_comments - deletes comments from the input
- *
- * @in: input string
- * Return: input without comments
+ * @in: string input
+ * Return: input
  */
 char *rm_comments(char *in)
 {
@@ -37,9 +36,8 @@ char *rm_comments(char *in)
 
 /**
  * shllLoop - Loop of shell
- * @datash: data relevant (av, input, args)
- *
- * Return: no return.
+ * @datash: relevant data
+ * Return: nothing.
  */
 void shllLoop(sh_data *datash)
 {

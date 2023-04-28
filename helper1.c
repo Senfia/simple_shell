@@ -1,8 +1,8 @@
 #include "headers.h"
 
 /**
- * sfj_hlp_env - Help information for the builtin env
- * Return: no return
+ * sfj_hlp_env - Helps information for the builtin env
+ * Return: nothing
  */
 void sfj_hlp_env(void)
 {
@@ -14,8 +14,8 @@ void sfj_hlp_env(void)
 
 }
 /**
- * sfj_hlp_setenv - Help information for the builtin setenv
- * Return: no return
+ * sfj_hlp_setenv - Helps information for the builtin setenv
+ * Return: nothing
  */
 void sfj_hlp_setenv(void)
 {
@@ -30,7 +30,7 @@ void sfj_hlp_setenv(void)
 }
 /**
  * sfj_hlp_unsetenv - Help information for the builtin unsetenv
- * Return: no return
+ * Return: nothing
  */
 void sfj_hlp_unsetenv(void)
 {
@@ -43,8 +43,8 @@ void sfj_hlp_unsetenv(void)
 
 
 /**
- * sfj_hlp_gen - Entry point for help information for the help builtin
- * Return: no return
+ * sfj_hlp_gen - Entry point.
+ * Return: nothing
  */
 void sfj_hlp_gen(void)
 {
@@ -65,8 +65,8 @@ void sfj_hlp_gen(void)
 	write(STDOUT_FILENO, help, _striLength(help));
 }
 /**
- * sfj_hlp_exit - Help information fot the builint exit
- * Return: no return
+ * sfj_hlp_exit - information fot the builint exit
+ * Return: nothing
  */
 void sfj_hlp_exit(void)
 {

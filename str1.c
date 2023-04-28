@@ -2,9 +2,9 @@
 
 /**
  * _StriCat - concatenate two strings
- * @dest: char pointer the dest of the copied str
+ * @dest: char pointer
  * @src: const char pointer the source of str
- * Return: the dest
+ * Return: the destination
  */
 char *_StriCat(char *dest, const char *src)
 {
@@ -27,7 +27,7 @@ char *_StriCat(char *dest, const char *src)
  * *_StirCpy - Copies the string pointed to by src.
  * @dest: Type char pointer the dest of the copied str
  * @src: Type char pointer the source of str
- * Return: the dest.
+ * Return: the destination.
  */
 char *_StirCpy(char *dest, char *src)
 {

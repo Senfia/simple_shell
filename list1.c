@@ -2,10 +2,9 @@
 
 /**
  * addSepTo_node - adds a separator found at the end
- * of a sperat_list.
- * @head: head of the linked list.
- * @sep: separator found (; | &).
- * Return: address of the head.
+ * @head: linked list head.
+ * @sep: separator found
+ * Return: head address.
  */
 sperat_list *addSepTo_node(sperat_list **head, char sep)
 {
@@ -35,8 +34,8 @@ sperat_list *addSepTo_node(sperat_list **head, char sep)
 
 /**
  * freeSepTo_node - frees a sperat_list
- * @head: head of the linked list.
- * Return: no return.
+ * @head: linked list head.
+ * Return: nothing.
  */
 void freeSepTo_node(sperat_list **head)
 {
@@ -56,11 +55,10 @@ void freeSepTo_node(sperat_list **head)
 }
 
 /**
- * addLinTo_node - adds a command line at the end
- * of a lin_list_ss.
- * @head: head of the linked list.
+ * addLinTo_node - adds a command line at the end.
+ * @head: linked list head
  * @line: command line.
- * Return: address of the head.
+ * Return: head address.
  */
 lin_list_ss *addLinTo_node(lin_list_ss **head, char *line)
 {
@@ -90,8 +88,8 @@ lin_list_ss *addLinTo_node(lin_list_ss **head, char *line)
 
 /**
  * freeLinTo_node - frees a lin_list_ss
- * @head: head of the linked list.
- * Return: no return.
+ * @head: linked list head.
+ * Return: nothing.
  */
 void freeLinTo_node(lin_list_ss **head)
 {

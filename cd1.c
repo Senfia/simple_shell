@@ -2,8 +2,8 @@
 
 /**
  * cd_Dot - changes to the parent directory
- * @datash: data relevant (environ)
- * Return: no return
+ * @datash: data
+ * Return: nothing
  */
 void cd_Dot(sh_data *datash)
 {
@@ -50,10 +50,9 @@ void cd_Dot(sh_data *datash)
 }
 
 /**
- * cd_Tot - changes to a directory given
- * by the user
- * @datash: data relevant (directories)
- * Return: no return
+ * cd_Tot - changes to a directory by the user
+ * @datash: relevant data
+ * Return: nothing
  */
 void cd_Tot(sh_data *datash)
 {
@@ -85,8 +84,8 @@ void cd_Tot(sh_data *datash)
 
 /**
  * cd_prev - changes to the previous directory
- * @datash: data relevant (environ)
- * Return: no return
+ * @datash: relevant data
+ * Return: nothing
  */
 void cd_prev(sh_data *datash)
 {
@@ -126,8 +125,8 @@ void cd_prev(sh_data *datash)
 
 /**
  * cd_To_Home - changes to home directory
- * @datash: data relevant (environ)
- * Return: no return
+ * @datash:  relevant data
+ * Return: nothing
  */
 void cd_To_Home(sh_data *datash)
 {

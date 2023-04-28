@@ -2,9 +2,9 @@
 
 /**
  * _reaptChar - counts the repetitions of a char
- * @input: input string
+ * @input: string input
  * @i: index
- * Return: repetitions
+ * Return: repts
  */
 int _reaptChar(char *input, int i)
 {
@@ -15,10 +15,10 @@ int _reaptChar(char *input, int i)
 }
 
 /**
- * err_find_synx - finds syntax errors
- * @input: input string
+ * err_find_synx - finds syntax errs
+ * @input: string input
  * @i: index
- * @last: last char read
+ * @last: char read
  * Return: index of error. 0 when there are no
  * errors
  */
@@ -67,8 +67,8 @@ int err_find_synx(char *input, int i, char last)
 }
 
 /**
- * index_Char - finds index of the first char
- * @input: input string
+ * index_Char - finds index of the first character
+ * @input: string input
  * @i: index
  * Return: 1 if there is an error. 0 in other case.
  */
@@ -90,12 +90,12 @@ int index_Char(char *input, int *i)
 }
 
 /**
- * printSynx_err - prints when a syntax error is found
- * @datash: data structure
- * @input: input string
+ * printSynx_err - prints when a syntax error
+ * @datash: data
+ * @input:  string input
  * @i: index of the error
- * @bool: to control msg error
- * Return: no return
+ * @bool: to control message error
+ * Return: nothing
  */
 void printSynx_err(sh_data *datash, char *input, int i, int bool)
 {
@@ -142,10 +142,9 @@ void printSynx_err(sh_data *datash, char *input, int i, int bool)
 }
 
 /**
- * check_Synx_err - intermediate function to
- * find and print a syntax error
- * @datash: data structure
- * @input: input string
+ * check_Synx_err - find and print a syntax error
+ * @datash: data
+ * @input:  string input
  * Return: 1 if there is an error. 0 in other case
  */
 int check_Synx_err(sh_data *datash, char *input)

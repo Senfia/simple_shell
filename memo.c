@@ -2,10 +2,10 @@
 
 /**
  * _memCopy - copies information between void pointers.
- * @newptr: destination pointer.
- * @ptr: source pointer.
- * @size: size of the new pointer.
- * Return: no return.
+ * @newptr: pointer destination.
+ * @ptr: pointer source.
+ * @size: new pointer size.
+ * Return: nothing.
  */
 void _memCopy(void *newptr, const void *ptr, unsigned int size)
 {
@@ -18,13 +18,11 @@ void _memCopy(void *newptr, const void *ptr, unsigned int size)
 }
 
 /**
- * _reallcmem - reallocates a memory block.
+ * _reallcmem - reallocates a memory.
  * @ptr: pointer to the memory previously allocated.
  * @old_size: size, in bytes, of the allocated space of ptr.
  * @new_size: new size, in bytes, of the new memory block.
- * Return: ptr.
- * if new_size == old_size, returns ptr without changes.
- * if malloc fails, returns NULL.
+ * Return: ptr.else returns NULL.
  */
 void *_reallcmem(void *ptr, unsigned int old_size, unsigned int new_size)
 {
@@ -60,9 +58,7 @@ void *_reallcmem(void *ptr, unsigned int old_size, unsigned int new_size)
  * @ptr: double pointer to the memory previously allocated.
  * @old_size: size, in bytes, of the allocated space of ptr.
  * @new_size: new size, in bytes, of the new memory block.
- * Return: ptr.
- * if new_size == old_size, returns ptr without changes.
- * if malloc fails, returns NULL.
+ * Return: ptr else null.
  */
 char **_reallocmemdp(char **ptr, unsigned int old_size, unsigned int new_size)
 {

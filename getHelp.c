@@ -1,8 +1,8 @@
 #include "headers.h"
 
 /**
- * get_help - function that retrieves help messages according builtin
- * @datash: data structure (args and input)
+ * get_help - retrieves help messages according to builtin
+ * @datash: data structure
  * Return: Return 0
 */
 int get_help(sh_data *datash)

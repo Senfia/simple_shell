@@ -1,9 +1,9 @@
 #include "headers.h"
 
 /**
- * get_length - Get the lenght of a number.
- * @n: type int number.
- * Return: Lenght of a number.
+ * get_length - Get length.
+ * @n: int number.
+ * Return: number length.
  */
 int get_length(int n)
 {
@@ -28,8 +28,8 @@ int get_length(int n)
 	return (lenght);
 }
 /**
- * sfj_itoa - function converts int to string.
- * @n: type int number
+ * sfj_itoa - converts integer to string.
+ * @n: number int
  * Return: String.
  */
 char *sfj_itoa(int n)
@@ -67,7 +67,7 @@ char *sfj_itoa(int n)
 
 /**
  * aToii - converts a string to an integer.
- * @s: input string.
+ * @s: string input.
  * Return: integer.
  */
 int aToii(char *s)

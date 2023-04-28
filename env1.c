@@ -1,11 +1,10 @@
 #include "headers.h"
 
 /**
- * cpy_info - copies info to create
- * a new env or alias
- * @name: name (env or alias)
- * @value: value (env or alias)
- * Return: new env or alias.
+ * cpy_info - copies info.
+ * @name: name.
+ * @value: value.
+ * Return: new env.
  */
 char *cpy_info(char *name, char *value)
 {
@@ -25,11 +24,11 @@ char *cpy_info(char *name, char *value)
 }
 
 /**
- * _setEnv - sets an environment variable
- * @name: name of the environment variable
- * @value: value of the environment variable
- * @datash: data structure (environ)
- * Return: no return
+ * _setEnv - Sets an environment variable
+ * @name: environment variable name
+ * @value: environment variable value
+ * @datash: data structure
+ * Return: nothing
  */
 void _setEnv(char *name, char *value, sh_data *datash)
 {
@@ -58,8 +57,7 @@ void _setEnv(char *name, char *value, sh_data *datash)
 
 /**
  * _setEnvi - compares env variables names
- * with the name passed.
- * @datash: data relevant (env name and env value)
+ * @datash: relevant data
  * Return: 1 on success.
  */
 int _setEnvi(sh_data *datash)
@@ -77,8 +75,8 @@ int _setEnvi(sh_data *datash)
 }
 
 /**
- * _unsetEnvi - deletes a environment variable
- * @datash: data relevant (env name)
+ * _unsetEnvi - deletes environment variable
+ * @datash: relevant data
  * Return: 1 on success.
  */
 int _unsetEnvi(sh_data *datash)
