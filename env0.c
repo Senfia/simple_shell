@@ -1,11 +1,10 @@
 #include "headers.h"
 
 /**
- * cmp_env_name - compares env variables names
- * with the name passed.
+ * cmp_env_name - compares env variables names.
  * @nenv: name of the environment variable
  * @name: name passed
- * Return: 0 if are not equal. Another value if they are.
+ * Return: 0 if not equal. Another value if they are.
  */
 int cmp_env_name(const char *nenv, const char *name)
 {
@@ -26,22 +25,20 @@ int cmp_env_name(const char *nenv, const char *name)
  * _get_env_var - get an environment variable
  * @name: name of the environment variable
  * @_environ: environment variable
- * Return: value of the environment variable if is found.
- * In other case, returns NULL.
+ * Return: environment variable value if found. returns NULL if not found.
  */
 char *_get_env_var(const char *name, char **_environ)
 {
 	char *ptr_env;
 	int i, mov;
 
-	/* Initialize ptr_env value */
+
 	ptr_env = NULL;
 	mov = 0;
-	/* Compare all environment variables */
-	/* environ is declared in the header file */
+
 	for (i = 0; _environ[i]; i++)
 	{
-		/* If name and env are equal */
+
 		mov = cmp_env_name(_environ[i], name);
 		if (mov)
 		{
@@ -55,7 +52,7 @@ char *_get_env_var(const char *name, char **_environ)
 
 /**
  * _Env_ - prints the evironment variables
- * @datash: data relevant.
+ * @datash: relevant data.
  * Return: 1 on success.
  */
 int _Env_(sh_data *datash)
