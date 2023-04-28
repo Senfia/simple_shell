@@ -16,12 +16,13 @@ int (*get_builtin(char *cmd))(sh_data *)
 		{ "help", get_help },
 		{ NULL, NULL }
 	};
-	int i;
+	int i = 0;
 
-	for (i = 0; builtin[i].name; i++)
+	while (builtin[i].name != NULL)
 	{
 		if (_StirCmpr(builtin[i].name, cmd) == 0)
 			break;
+		i++;
 	}
 
 	return (builtin[i].f);
