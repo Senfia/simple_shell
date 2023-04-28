@@ -8,14 +8,15 @@
  */
 int cmp_env_name(const char *nenv, const char *name)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; nenv[i] != '='; i++)
+	while (nenv[i] != '=')
 	{
 		if (nenv[i] != name[i])
 		{
 			return (0);
 		}
+		i++;
 	}
 
 	return (i + 1);
@@ -29,26 +30,23 @@ int cmp_env_name(const char *nenv, const char *name)
  */
 char *_get_env_var(const char *name, char **_environ)
 {
-	char *ptr_env;
-	int i, mov;
+	char *ptr_env = NULL;
+	int i = 0, mov = 0;
 
-
-	ptr_env = NULL;
-	mov = 0;
-
-	for (i = 0; _environ[i]; i++)
+	while (_environ[i])
 	{
-
 		mov = cmp_env_name(_environ[i], name);
 		if (mov)
 		{
 			ptr_env = _environ[i];
 			break;
 		}
+		i++;
 	}
 
 	return (ptr_env + mov);
 }
+
 
 /**
  * _Env_ - prints the evironment variables

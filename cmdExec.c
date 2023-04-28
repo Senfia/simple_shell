@@ -40,8 +40,7 @@ char *_whichCmd(char *cmd, char **_environ)
 		ptr_path = _striDup(path);
 		len_cmd = _striLength(cmd);
 		token_path = _strtok(ptr_path, ":");
-		i = 0;
-		while (token_path != NULL)
+		for (i = 0; token_path != NULL; i++, token_path = _strtok(NULL, ":"))
 		{
 			if (_isCdir(path, &i))
 				if (stat(cmd, &st) == 0)
@@ -58,7 +57,6 @@ char *_whichCmd(char *cmd, char **_environ)
 				return (dir);
 			}
 			free(dir);
-			token_path = _strtok(NULL, ":");
 		}
 		free(ptr_path);
 		if (stat(cmd, &st) == 0)
@@ -70,6 +68,7 @@ char *_whichCmd(char *cmd, char **_environ)
 			return (cmd);
 	return (NULL);
 }
+
 
 /**
  * _excutble - determines an executable
