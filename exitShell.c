@@ -5,7 +5,7 @@
  * @datash: data relevant (status and args)
  * Return: 0 on success.
  */
-int exit_Sh(data_shell *datash)
+int exit_Sh(sh_data *datash)
 {
 	unsigned int ustatus;
 	int is_digit;

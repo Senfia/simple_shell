@@ -97,7 +97,7 @@ int index_Char(char *input, int *i)
  * @bool: to control msg error
  * Return: no return
  */
-void printSynx_err(data_shell *datash, char *input, int i, int bool)
+void printSynx_err(sh_data *datash, char *input, int i, int bool)
 {
 	char *msg, *msg2, *msg3, *error, *counter;
 	int length;
@@ -148,7 +148,7 @@ void printSynx_err(data_shell *datash, char *input, int i, int bool)
  * @input: input string
  * Return: 1 if there is an error. 0 in other case
  */
-int check_Synx_err(data_shell *datash, char *input)
+int check_Synx_err(sh_data *datash, char *input)
 {
 	int begin = 0;
 	int f_char = 0;

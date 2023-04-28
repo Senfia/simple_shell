@@ -5,7 +5,7 @@
  * @datash: data relevant (environ)
  * Return: no return
  */
-void cd_Dot(data_shell *datash)
+void cd_Dot(sh_data *datash)
 {
 	char pwd[PATH_MAX];
 	char *dir, *cp_pwd, *cp_strtok_pwd;
@@ -55,7 +55,7 @@ void cd_Dot(data_shell *datash)
  * @datash: data relevant (directories)
  * Return: no return
  */
-void cd_Tot(data_shell *datash)
+void cd_Tot(sh_data *datash)
 {
 	char pwd[PATH_MAX];
 	char *dir, *cp_pwd, *cp_dir;
@@ -88,7 +88,7 @@ void cd_Tot(data_shell *datash)
  * @datash: data relevant (environ)
  * Return: no return
  */
-void cd_prev(data_shell *datash)
+void cd_prev(sh_data *datash)
 {
 	char pwd[PATH_MAX];
 	char *p_pwd, *p_oldpwd, *cp_pwd, *cp_oldpwd;
@@ -129,7 +129,7 @@ void cd_prev(data_shell *datash)
  * @datash: data relevant (environ)
  * Return: no return
  */
-void cd_To_Home(data_shell *datash)
+void cd_To_Home(sh_data *datash)
 {
 	char *p_pwd, *home;
 	char pwd[PATH_MAX];

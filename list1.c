@@ -2,16 +2,16 @@
 
 /**
  * addSepTo_node - adds a separator found at the end
- * of a sep_list.
+ * of a sperat_list.
  * @head: head of the linked list.
  * @sep: separator found (; | &).
  * Return: address of the head.
  */
-sep_list *addSepTo_node(sep_list **head, char sep)
+sperat_list *addSepTo_node(sperat_list **head, char sep)
 {
-	sep_list *new, *temp;
+	sperat_list *new, *temp;
 
-	new = malloc(sizeof(sep_list));
+	new = malloc(sizeof(sperat_list));
 	if (new == NULL)
 		return (NULL);
 
@@ -34,14 +34,14 @@ sep_list *addSepTo_node(sep_list **head, char sep)
 }
 
 /**
- * freeSepTo_node - frees a sep_list
+ * freeSepTo_node - frees a sperat_list
  * @head: head of the linked list.
  * Return: no return.
  */
-void freeSepTo_node(sep_list **head)
+void freeSepTo_node(sperat_list **head)
 {
-	sep_list *temp;
-	sep_list *curr;
+	sperat_list *temp;
+	sperat_list *curr;
 
 	if (head != NULL)
 	{
@@ -57,16 +57,16 @@ void freeSepTo_node(sep_list **head)
 
 /**
  * addLinTo_node - adds a command line at the end
- * of a line_list.
+ * of a lin_list_ss.
  * @head: head of the linked list.
  * @line: command line.
  * Return: address of the head.
  */
-line_list *addLinTo_node(line_list **head, char *line)
+lin_list_ss *addLinTo_node(lin_list_ss **head, char *line)
 {
-	line_list *new, *temp;
+	lin_list_ss *new, *temp;
 
-	new = malloc(sizeof(line_list));
+	new = malloc(sizeof(lin_list_ss));
 	if (new == NULL)
 		return (NULL);
 
@@ -89,14 +89,14 @@ line_list *addLinTo_node(line_list **head, char *line)
 }
 
 /**
- * freeLinTo_node - frees a line_list
+ * freeLinTo_node - frees a lin_list_ss
  * @head: head of the linked list.
  * Return: no return.
  */
-void freeLinTo_node(line_list **head)
+void freeLinTo_node(lin_list_ss **head)
 {
-	line_list *temp;
-	line_list *curr;
+	lin_list_ss *temp;
+	lin_list_ss *curr;
 
 	if (head != NULL)
 	{

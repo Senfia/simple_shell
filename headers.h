@@ -38,31 +38,31 @@ typedef struct data
 	int counter;
 	char **_environ;
 	char *pid;
-} data_shell;
+} sh_data;
 
 /**
- * struct sep_list_s - single linked list
+ * struct sperat_list_s - single linked list
  * @separator: ; | &
  * @next: next node
  * Description: single linked list to store separators
  */
-typedef struct sep_list_s
+typedef struct sperat_list_s
 {
 	char separator;
-	struct sep_list_s *next;
-} sep_list;
+	struct sperat_list_s *next;
+} sperat_list;
 
 /**
- * struct line_list_s - single linked list
+ * struct lin_list_ss_s - single linked list
  * @line: command line
  * @next: next node
  * Description: single linked list to store command lines
  */
-typedef struct line_list_s
+typedef struct lin_list_ss_s
 {
 	char *line;
-	struct line_list_s *next;
-} line_list;
+	struct lin_list_ss_s *next;
+} lin_list_ss;
 
 /**
  * struct r_var_list - single linked list
@@ -88,14 +88,14 @@ typedef struct r_var_list
 typedef struct builtin_s
 {
 	char *name;
-	int (*f)(data_shell *datash);
+	int (*f)(sh_data *datash);
 } builtin_t;
 
 /* list1.c */
-sep_list *addSepTo_node(sep_list **head, char sep);
-void freeSepTo_node(sep_list **head);
-line_list *addLinTo_node(line_list **head, char *line);
-void freeLinTo_node(line_list **head);
+sperat_list *addSepTo_node(sperat_list **head, char sep);
+void freeSepTo_node(sperat_list **head);
+lin_list_ss *addLinTo_node(lin_list_ss **head, char *line);
+void freeLinTo_node(lin_list_ss **head);
 
 /* lists2.c */
 void freeVarLi(r_var **head);
@@ -127,67 +127,67 @@ void _rvString(char *s);
 int _reaptChar(char *input, int i);
 int index_Char(char *input, int *i);
 int err_find_synx(char *input, int i, char last);
-int check_Synx_err(data_shell *datash, char *input);
-void printSynx_err(data_shell *datash, char *input, int i, int bool);
+int check_Synx_err(sh_data *datash, char *input);
+void printSynx_err(sh_data *datash, char *input, int i, int bool);
 
 /* shellLoop.c */
 char *rm_comments(char *in);
-void shllLoop(data_shell *datash);
+void shllLoop(sh_data *datash);
 
 /* read_line.c */
 char *readLine(int *i_eof);
 
 /* splitz.c */
-void addNode_s(sep_list **head_s, line_list **head_l, char *input);
+void addNode_s(sperat_list **head_s, lin_list_ss **head_l, char *input);
 char *swpChar(char *input, int bool);
-void goToNext(sep_list **list_s, line_list **list_l, data_shell *datash);
+void goToNext(sperat_list **list_s, lin_list_ss **list_l, sh_data *datash);
 char **slice_Line(char *input);
-int slice_cmds(data_shell *datash, char *input);
+int slice_cmds(sh_data *datash, char *input);
 
 /* rep_var.c */
-void checkEnv_(r_var **h, char *in, data_shell *data);
-int check_vars(r_var **h, char *in, char *st, data_shell *data);
+void checkEnv_(r_var **h, char *in, sh_data *data);
+int check_vars(r_var **h, char *in, char *st, sh_data *data);
 char *rplce_input(r_var **head, char *input, char *new_input, int nlen);
-char *rplce_var(char *input, data_shell *datash);
+char *rplce_var(char *input, sh_data *datash);
 
 /* get_line.c */
 ssize_t _getLine(char **lineptr, size_t *n, FILE *stream);
 void asignLine(char **lineptr, size_t *n, char *buffer, size_t j);
 
 /* exec_line */
-int exec_line(data_shell *datash);
+int exec_line(sh_data *datash);
 
 /* cmdExec.c */
 int _isCdir(char *path, int *i);
 char *_whichCmd(char *cmd, char **_environ);
-int _excutble(data_shell *datash);
-int _exec_cmd(data_shell *datash);
-int _chk_err_cmd(char *dir, data_shell *datash);
+int _excutble(sh_data *datash);
+int _exec_cmd(sh_data *datash);
+int _chk_err_cmd(char *dir, sh_data *datash);
 
 /* env0.c */
 char *_get_env_var(const char *name, char **_environ);
-int _Env_(data_shell *datash);
+int _Env_(sh_data *datash);
 
 /* env1.c */
-void _setEnv(char *name, char *value, data_shell *datash);
+void _setEnv(char *name, char *value, sh_data *datash);
 char *cpy_info(char *name, char *value);
-int _setEnvi(data_shell *datash);
-int _unsetEnvi(data_shell *datash);
+int _setEnvi(sh_data *datash);
+int _unsetEnvi(sh_data *datash);
 
 /* cd1.c */
-void cd_Dot(data_shell *datash);
-void cd_Tot(data_shell *datash);
-void cd_To_Home(data_shell *datash);
-void cd_prev(data_shell *datash);
+void cd_Dot(sh_data *datash);
+void cd_Tot(sh_data *datash);
+void cd_To_Home(sh_data *datash);
+void cd_prev(sh_data *datash);
 
 /* sdShell.c */
-int cd_Main(data_shell *datash);
+int cd_Main(sh_data *datash);
 
 /* getBuiltin */
-int (*get_builtin(char *cmd))(data_shell *datash);
+int (*get_builtin(char *cmd))(sh_data *datash);
 
 /* _exit.c */
-int exit_Sh(data_shell *datash);
+int exit_Sh(sh_data *datash);
 
 /* stdlib.c */
 int get_length(int n);
@@ -195,21 +195,21 @@ int aToii(char *s);
 char *sfj_itoa(int n);
 
 /* error1.c */
-char *errmsg_strcat(data_shell *, char *, char *, char *);
-char *errmsg_notFound(data_shell *datash);
-char *errmsg_get_cd(data_shell *datash);
-char *errmsg_exit_sh(data_shell *datash);
+char *errmsg_strcat(sh_data *, char *, char *, char *);
+char *errmsg_notFound(sh_data *datash);
+char *errmsg_get_cd(sh_data *datash);
+char *errmsg_exit_sh(sh_data *datash);
 
 /* error2.c */
 char *error_get_alias(char **args);
-char *errmsg_env(data_shell *datash);
+char *errmsg_env(sh_data *datash);
 char *error_syntax(char **args);
 char *error_permission(char **args);
-char *errmsg_path_denied(data_shell *datash);
+char *errmsg_path_denied(sh_data *datash);
 
 
 /* getError.c */
-int get_error(data_shell *datash, int eval);
+int get_error(sh_data *datash, int eval);
 
 /* getSigint.c */
 void _get_signal(int sig);
@@ -227,6 +227,6 @@ void sfj_hlp_cd(void);
 void sfj_hlp_alias(void);
 
 /* getHelp.c */
-int get_help(data_shell *datash);
+int get_help(sh_data *datash);
 
 #endif

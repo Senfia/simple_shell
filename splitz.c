@@ -51,7 +51,7 @@ char *swpChar(char *input, int bool)
  * @input: input string
  * Return: no return
  */
-void addNode_s(sep_list **head_s, line_list **head_l, char *input)
+void addNode_s(sperat_list **head_s, lin_list_ss **head_l, char *input)
 {
 	int i;
 	char *line;
@@ -87,11 +87,11 @@ void addNode_s(sep_list **head_s, line_list **head_l, char *input)
  * @datash: data structure
  * Return: no return
  */
-void goToNext(sep_list **list_s, line_list **list_l, data_shell *datash)
+void goToNext(sperat_list **list_s, lin_list_ss **list_l, sh_data *datash)
 {
 	int loop_sep;
-	sep_list *ls_s;
-	line_list *ls_l;
+	sperat_list *ls_s;
+	lin_list_ss *ls_l;
 
 	loop_sep = 1;
 	ls_s = *list_s;
@@ -129,11 +129,11 @@ void goToNext(sep_list **list_s, line_list **list_l, data_shell *datash)
  * @input: input string
  * Return: 0 to exit, 1 to continue
  */
-int slice_cmds(data_shell *datash, char *input)
+int slice_cmds(sh_data *datash, char *input)
 {
 
-	sep_list *head_s, *list_s;
-	line_list *head_l, *list_l;
+	sperat_list *head_s, *list_s;
+	lin_list_ss *head_l, *list_l;
 	int loop;
 
 	head_s = NULL;

@@ -58,7 +58,7 @@ char *_get_env_var(const char *name, char **_environ)
  * @datash: data relevant.
  * Return: 1 on success.
  */
-int _Env_(data_shell *datash)
+int _Env_(sh_data *datash)
 {
 	int i, j;
 

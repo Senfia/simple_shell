@@ -41,7 +41,7 @@ char *rm_comments(char *in)
  *
  * Return: no return.
  */
-void shllLoop(data_shell *datash)
+void shllLoop(sh_data *datash)
 {
 	int loop, i_eof;
 	char *input;

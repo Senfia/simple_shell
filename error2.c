@@ -5,7 +5,7 @@
  * @datash: data relevant (counter, arguments)
  * Return: error message.
  */
-char *errmsg_env(data_shell *datash)
+char *errmsg_env(sh_data *datash)
 {
 	int length;
 	char *error;
@@ -40,7 +40,7 @@ char *errmsg_env(data_shell *datash)
  * @datash: data relevant (counter, arguments).
  * Return: The error string.
  */
-char *errmsg_path_denied(data_shell *datash)
+char *errmsg_path_denied(sh_data *datash)
 {
 	int length;
 	char *ver_str;

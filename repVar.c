@@ -8,7 +8,7 @@
  * @data: data structure
  * Return: no return
  */
-void checkEnv_(r_var **h, char *in, data_shell *data)
+void checkEnv_(r_var **h, char *in, sh_data *data)
 {
 	int row, chr, j, lval;
 	char **_envr;
@@ -50,7 +50,7 @@ void checkEnv_(r_var **h, char *in, data_shell *data)
  * @data: data structure
  * Return: no return
  */
-int check_vars(r_var **h, char *in, char *st, data_shell *data)
+int check_vars(r_var **h, char *in, char *st, sh_data *data)
 {
 	int i, lst, lpd;
 
@@ -142,7 +142,7 @@ char *rplce_input(r_var **head, char *input, char *new_input, int nlen)
  * @datash: data structure
  * Return: replaced string
  */
-char *rplce_var(char *input, data_shell *datash)
+char *rplce_var(char *input, sh_data *datash)
 {
 	r_var *head, *indx;
 	char *status, *new_input;

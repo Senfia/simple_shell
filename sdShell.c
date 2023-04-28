@@ -5,7 +5,7 @@
  * @datash: data relevant
  * Return: 1 on success
  */
-int cd_Main(data_shell *datash)
+int cd_Main(sh_data *datash)
 {
 	char *dir;
 	int ishome, ishome2, isddash;

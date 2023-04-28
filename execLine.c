@@ -6,9 +6,9 @@
  * @datash: data relevant (args)
  * Return: 1 on success.
  */
-int exec_line(data_shell *datash)
+int exec_line(sh_data *datash)
 {
-	int (*builtin)(data_shell *datash);
+	int (*builtin)(sh_data *datash);
 
 	if (datash->args[0] == NULL)
 		return (1);

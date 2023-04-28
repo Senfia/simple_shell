@@ -5,7 +5,7 @@
  * @datash: data structure (args and input)
  * Return: Return 0
 */
-int get_help(data_shell *datash)
+int get_help(sh_data *datash)
 {
 
 	if (datash->args[1] == 0)
