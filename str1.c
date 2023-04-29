@@ -86,9 +86,9 @@ char *_StriChr(char *s, char c)
  */
 int _StirSpn(char *s, char *accept)
 {
-	int i, j, bool;
+	int i = 0, j, bool = 1;
 
-	for (i = 0; *(s + i) != '\0'; i++)
+	while (*(s + i) != '\0')
 	{
 		bool = 1;
 		for (j = 0; *(accept + j) != '\0'; j++)
@@ -101,6 +101,7 @@ int _StirSpn(char *s, char *accept)
 		}
 		if (bool == 1)
 			break;
+		i++;
 	}
 	return (i);
 }

@@ -74,11 +74,14 @@ int err_find_synx(char *input, int i, char last)
  */
 int index_Char(char *input, int *i)
 {
-
-	for (*i = 0; input[*i]; *i += 1)
+	*i = 0;
+	while (input[*i])
 	{
 		if (input[*i] == ' ' || input[*i] == '\t')
+		{
+			*i += 1;
 			continue;
+		}
 
 		if (input[*i] == ';' || input[*i] == '|' || input[*i] == '&')
 			return (-1);

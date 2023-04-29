@@ -63,7 +63,7 @@ void *_reallcmem(void *ptr, unsigned int old_size, unsigned int new_size)
 char **_reallocmemdp(char **ptr, unsigned int old_size, unsigned int new_size)
 {
 	char **newptr;
-	unsigned int i;
+	unsigned int i = 0;
 
 	if (ptr == NULL)
 		return (malloc(sizeof(char *) * new_size));
@@ -75,8 +75,11 @@ char **_reallocmemdp(char **ptr, unsigned int old_size, unsigned int new_size)
 	if (newptr == NULL)
 		return (NULL);
 
-	for (i = 0; i < old_size; i++)
+	while (i < old_size)
+	{
 		newptr[i] = ptr[i];
+		i++;
+	}
 
 	free(ptr);
 

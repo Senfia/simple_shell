@@ -7,10 +7,9 @@
  */
 char *rm_comments(char *in)
 {
-	int i, up_to;
+	int i = 0, up_to = 0;
 
-	up_to = 0;
-	for (i = 0; in[i]; i++)
+	while (in[i])
 	{
 		if (in[i] == '#')
 		{
@@ -23,6 +22,8 @@ char *rm_comments(char *in)
 			if (in[i - 1] == ' ' || in[i - 1] == '\t' || in[i - 1] == ';')
 				up_to = i;
 		}
+
+		i++;
 	}
 
 	if (up_to != 0)

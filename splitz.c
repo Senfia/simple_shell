@@ -89,15 +89,11 @@ void addNode_s(sperat_list **head_s, lin_list_ss **head_l, char *input)
  */
 void goToNext(sperat_list **list_s, lin_list_ss **list_l, sh_data *datash)
 {
-	int loop_sep;
-	sperat_list *ls_s;
-	lin_list_ss *ls_l;
+	int loop_sep = 1;
+	sperat_list *ls_s = *list_s;
+	lin_list_ss *ls_l = *list_l;
 
-	loop_sep = 1;
-	ls_s = *list_s;
-	ls_l = *list_l;
-
-	while (ls_s != NULL && loop_sep)
+	for (; ls_s != NULL && loop_sep; ls_s = ls_s->next)
 	{
 		if (datash->status == 0)
 		{
@@ -105,8 +101,7 @@ void goToNext(sperat_list **list_s, lin_list_ss **list_l, sh_data *datash)
 				loop_sep = 0;
 			if (ls_s->separator == '|')
 				ls_l = ls_l->next, ls_s = ls_s->next;
-		}
-		else
+		} else
 		{
 			if (ls_s->separator == '|' || ls_s->separator == ';')
 				loop_sep = 0;

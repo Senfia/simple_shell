@@ -95,10 +95,10 @@ int check_vars(r_var **h, char *in, char *st, sh_data *data)
 char *rplce_input(r_var **head, char *input, char *new_input, int nlen)
 {
 	r_var *indx;
-	int i, j, k;
+	int i = 0, j = 0, k;
 
 	indx = *head;
-	for (j = i = 0; i < nlen; i++)
+	while (i < nlen)
 	{
 		if (input[j] == '$')
 		{
@@ -130,6 +130,7 @@ char *rplce_input(r_var **head, char *input, char *new_input, int nlen)
 			new_input[i] = input[j];
 			j++;
 		}
+		i++;
 	}
 
 	return (new_input);

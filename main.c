@@ -34,14 +34,19 @@ void set_data(sh_data *datash, char **av)
 	datash->status = 0;
 	datash->counter = 1;
 
-	for (i = 0; environ[i]; i++)
-		;
+	i = 0;
+	while (environ[i] != NULL)
+	{
+		i++;
+	}
 
 	datash->_environ = malloc(sizeof(char *) * (i + 1));
 
-	for (i = 0; environ[i]; i++)
+	i = 0;
+	while (environ[i] != NULL)
 	{
 		datash->_environ[i] = _striDup(environ[i]);
+		i++;
 	}
 
 	datash->_environ[i] = NULL;
